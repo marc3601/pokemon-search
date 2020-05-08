@@ -1,4 +1,4 @@
-let ranNum, result, cards, div, img, cardHead, h1, span, alertBox, middleContainer;
+let ranNum, result, cards, div, img, cardHead, h1, span, alertBox, middleContainer, clikAgain;
 const container = document.querySelector(".articles");
 load();
 
@@ -24,7 +24,8 @@ function load() {
     };
   };
   req.addEventListener('load', processReq, false);
-  return cards;
+  clickAgain = req
+  return clikAgain
 };
 
 
@@ -57,9 +58,6 @@ function createDivs() {
   };
 };
 
-function isHidden(el) {
-  return (el.offsetParent === null)
-}
 
 function search() {
   let id = [];
@@ -93,4 +91,9 @@ function search() {
 };
 
 document.addEventListener("keyup", search);
-document.querySelector(".more").addEventListener('click', load);
+
+document.querySelector(".more").addEventListener('click', () => {
+  if (clickAgain.status === 200) {
+    load();
+  }
+});
