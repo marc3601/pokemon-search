@@ -55,6 +55,16 @@ nav input:focus {
     transition: .5s ease;
 }
 
+.warning {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    transition: .5s ease;
+}
+
+.empty {
+    margin-top: 100px;
+}
+
 .middle,
 .alertBox {
     width: 100%;
@@ -170,18 +180,17 @@ nav input:focus {
     nav {
         padding: 0 100px;
     }
+
     nav .logo {
         font-size: 1.2rem;
     }
 }
+
 @media only screen and (man-width: 400px) {
     .articles {
         margin-top: 100px;
     }
 }
-
-
-
 
 @media only screen and (max-width: 1600px) {
     .wrap {
