@@ -56,7 +56,30 @@ function createDivs() {
 
   };
 };
-document.querySelector(".more").addEventListener('click', () => {
-  load();
 
-});
+function search() {
+  let input, filter, h1, articles,article, textValue, checkThis,middle;
+  input = document.querySelector("input");
+  filter = input.value.toUpperCase();
+  h1 = document.querySelectorAll("h1")
+  articles = document.querySelectorAll(".article")
+  middle = document.querySelectorAll(".middle")
+  for (i = 0; i < h1.length; i++) {
+    article = articles[i]
+    checkThis = h1[i]
+    textValue = checkThis.textContent
+    if(textValue.toUpperCase().indexOf(filter) > -1) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
+  }
+}
+
+document.addEventListener("keyup", search);
+
+
+
+
+document.querySelector(".more").addEventListener('click', load);
+

@@ -174,6 +174,11 @@ nav input:focus {
         font-size: 1.2rem;
     }
 }
+@media only screen and (man-width: 400px) {
+    .articles {
+        margin-top: 100px;
+    }
+}
 
 
 
